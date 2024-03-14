@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Lotus ML</title>
+{% endblock %}
+
+{% block logo %}
+<div class="logo">
+    <img src="{{url_for('static', filename = 'assets/images/Logo_black_100px.png')}}" alt="Logo">
+    <p><span><h1>LOTUS ML</h1></span></p>
+</div>
+{% endblock %}
+
+{% block into %}
+    <section class="intro">
+    <div class="intro-content">
+        <h1>Welcome to Lotus ML</h1>
+        <p>This is a site to explore the possibilities of Artificial Intelligence and Machine Learning.</p>
+    </div>
+    </section> 
+{% endblock %}
+
