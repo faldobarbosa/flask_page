@@ -1,23 +1,20 @@
 from flask import Flask, render_template, url_for
 from flask import request, jsonify, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
-import os
-from dotenv import load_dotenv
-from database import db
+from database import app, db
 
 
-
-load_dotenv()
-
-
-app = Flask(__name__)
+# app = Flask(__name__)
 
 
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://franco:Fa101325@localhost/postgres'
-app.config['SQLALCHEMY_DATABASE_URI'] = f"postgresql://{os.getenv('POSTGRES_USER')}:{os.getenv('POSTGRES_PASSWORD')}@db:5432/{os.getenv('POSTGRES_DB')}"
+# app.config['SQLALCHEMY_DATABASE_URI'] = f"postgresql://{os.getenv('POSTGRES_USER')}:{os.getenv('POSTGRES_PASSWORD')}@db:5432/{os.getenv('POSTGRES_DB')}"
 
+# db =  SQLAlchemy(app)
 
-db.init_app(app)
+# db.init_app(app)
+
+from models import *
 
 from views import *
 

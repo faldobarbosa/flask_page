@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 5000
 
 # Set the entrypoint command to run the Flask app
-CMD ["python", "app.py"]
+CMD ["python", "run.py"]
