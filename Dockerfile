@@ -11,7 +11,10 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the project files to the working directory
-COPY . .
+
+COPY app_page/ ./app_page
+
+COPY run.py .
 
 # Expose the port that the Flask app will run on
 EXPOSE 5000
