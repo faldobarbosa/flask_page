@@ -1,7 +1,7 @@
-from flask import Flask, jsonify, request, redirect, url_for, render_template
+from flask import jsonify, request, redirect, url_for, render_template
 from app_page.database import db, app
 from app_page.models import User
-# from run import app
+
 
 @app.route('/users', methods=['GET'])
 def get_users():
