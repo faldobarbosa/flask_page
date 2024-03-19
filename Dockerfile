@@ -17,7 +17,9 @@ COPY app_page/ ./app_page
 COPY run.py .
 
 # Expose the port that the Flask app will run on
-EXPOSE 5000
+EXPOSE 80
 
 # Set the entrypoint command to run the Flask app
-CMD ["python", "run.py"]
+# CMD ["python", "run.py"]
+# CMD ["gunicorn", "-w", "4", "run:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:80", "-w", "4", "run:app"]
